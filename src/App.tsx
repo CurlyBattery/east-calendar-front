@@ -1,16 +1,15 @@
-import {Route, Routes} from "react-router-dom";
-
-import HomePage from "./pages/HomePage.tsx";
-import UsersPage from "./pages/UsersPage.tsx";
-import UserItemPage from "./pages/UserItemPage.tsx";
+import Header from "./components/Layout/Header.tsx";
+import Footer from "./components/Layout/Footer.tsx";
+import AppRoutes from "./components/Layout/AppRoutes.tsx";
+import './index.css';
 
 function App() {
   return (
-    <Routes>
-      <Route index element={<HomePage />} />
-      <Route path='/users' element={<UsersPage />} />
-      <Route path='/users/:id' element={<UserItemPage />} />
-    </Routes>
+      <>
+          <Header />
+          <AppRoutes />
+          <Footer />
+      </>
   )
 }
 

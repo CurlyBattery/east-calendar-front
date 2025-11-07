@@ -12,6 +12,16 @@ export const getUsers = async () => {
 }
 
 export const getUser = async (id: string) => {
-    const { data } = await $host.get<IUser>('users/' + id);
+    const { data } = await $host.get<IUser>(`users/${id}`);
+    return data;
+}
+
+export const updateUser = async (id: string, user: IUser) => {
+    const { data } = await $host.patch(`users/${id}`, user);
+    return data;
+}
+
+export const deleteUser = async (id: string) => {
+    const { data } = await $host.delete(`users/${id}`);
     return data;
 }
