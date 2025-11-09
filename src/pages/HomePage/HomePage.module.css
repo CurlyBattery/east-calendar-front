@@ -1,0 +1,158 @@
+.main {
+    font-family: 'MyFont', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: black;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12em 0;
+
+
+    .left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 300px;
+            transform: rotate(-15deg);
+        }
+    }
+
+    .right {
+        width: 50%;
+        margin: 0 2em;
+        display: flex;
+        align-items: center;
+
+        .heroTextBlock {
+            background: #dbd7d2;
+            padding: 1em;
+            border-radius: 15px;
+
+            .headerForHero {
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.howItWork {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12em 0;
+
+    .left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 300px;
+            transform: rotate(-15deg);
+        }
+    }
+
+    .right {
+        width: 50%;
+        margin: 0 2em;
+        display: flex;
+        align-items: center;
+
+        .heroTextBlock {
+            background: #dbd7d2;
+            padding: 1em;
+            border-radius: 15px;
+
+            .headerForHero {
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.forWhom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12em 0;
+
+
+    .left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 300px;
+            transform: rotate(-15deg);
+        }
+    }
+
+    .right {
+        width: 50%;
+        margin: 0 2em;
+        display: flex;
+        align-items: center;
+
+        .heroTextBlock {
+            background: #dbd7d2;
+            padding: 1em;
+            border-radius: 15px;
+
+            .headerForHero {
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.functionality {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12em 0;
+
+
+    .left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 300px;
+            transform: rotate(-15deg);
+        }
+    }
+
+    .right {
+        width: 50%;
+        margin: 0 2em;
+        display: flex;
+        align-items: center;
+
+        .heroTextBlock {
+            background: #dbd7d2;
+            padding: 1em;
+            border-radius: 15px;
+
+            .headerForHero {
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+    }
+}

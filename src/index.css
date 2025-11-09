@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('/src/assets/fonts/MPLUSRounded1c-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +15,16 @@ html, body, #root {
     height: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .container {
-    height: calc(100vh - 90px - 50px);
-    background: red;
+    min-height: calc(100vh - 90px - 50px);
+    flex: 1;
 }

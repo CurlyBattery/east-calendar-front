@@ -1,4 +1,37 @@
 .footer {
     height: 50px;
-    background: grey;
+    background: rgba(128, 128, 128, 0.5);
+    padding: 1em;
 }
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    font-size: 15px;
+    font-family: 'MyFont', sans-serif;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    li {
+        a {
+            font-family: 'MyFont', sans-serif;
+        }
+        .stick {
+            height: 100%;
+            border-left: 2px solid grey;
+        }
+
+    }
+}
+

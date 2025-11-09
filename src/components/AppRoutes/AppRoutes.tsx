@@ -1,9 +1,9 @@
 import {Route, Routes} from "react-router-dom";
 
-import HomePage from "../../pages/HomePage.tsx";
 import UsersPage from "../../pages/UsersPage.tsx";
 import UserItemPage from "../../pages/UserItemPage.tsx";
 import Layout from "../Layout/Layout.tsx";
+import HomePage from "../../pages/HomePage/HomePage.tsx";
 
 const AppRoutes = () => {
     return (
