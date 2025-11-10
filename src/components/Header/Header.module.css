@@ -1,43 +1,58 @@
 .header {
-    background: #131313;
-    min-height: 90px;
+    background-color: #37353E;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
-    font-size: 14px;
-}
-
-.logoContainer {
-    display: flex;
     align-items: center;
-    gap: 10px;
-    max-height: 90px;
-    font-size: 20px;
+    height: 90px;
+    color: #D3DAD9;
+    font-family: 'MyFont', sans-serif;
+    padding: 0 10em;
 
-    img {
-        border-radius: 50%;
-        height: 90px;
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.3em;
+
+        img {
+            max-height: 90px;
+        }
+    }
+    .logoContainer:hover {
+        cursor: pointer;
+        color: rgba(211, 218, 217, 0.5);
     }
 
-    p {
-        font-family: 'MyFont', sans-serif;
-        color: #dbd7d2;
+
+    .navbarList {
+        display: flex;
+        gap: 2em;
+
+        .navbarItem {
+            a {
+                span {
+                    color: #E9B63B;
+                }
+            }
+        }
+        .navbarItem a:hover, a span:hover {
+            cursor: pointer;
+            color: rgba(211, 218, 217, 0.5);
+        }
+        .navbarItem:last-child a {
+            padding: .2em .5em;
+            border-radius: 15px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbarItem:last-child a:hover {
+            background-color: #E9B63B;
+            color: #37353E;
+        }
+
     }
 }
 
-ul {
-    align-self: center;
-    font-family: 'MyFont', sans-serif;
-    font-size: 14px;
-
-    a {
-        color: #a5a5a5;
-        cursor: pointer;
-    }
-
-    span {
-       color: #fff680;
-    }
+a {
+    color: #D3DAD9;
 }

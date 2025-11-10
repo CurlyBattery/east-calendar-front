@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import logo from '../../assets/images/logo.jpg';
+import logo from '../../assets/images/logo.png';
 
 const Header = () => {
     const isAuth = false;
@@ -10,16 +10,16 @@ const Header = () => {
                 <img src={logo} alt="Логотип компании"/>
                 <p>EastCalendar</p>
             </div>
-            <ul>
-                <li><a href="#"><span>Премиум</span></a></li>
-                <li><a href="#">Пользователи</a></li>
-                <li><a href="#">Календарь</a></li>
-                <li><a href="#">О проекте</a></li>
+            <ul className={styles.navbarList}>
+                <li className={styles.navbarItem}><a href="#"><span>Премиум</span></a></li>
+                <li className={styles.navbarItem}><a href="#">Пользователи</a></li>
+                <li className={styles.navbarItem}><a href="#">Календарь</a></li>
+                <li className={styles.navbarItem}><a href="#">О проекте</a></li>
                 {isAuth
-                    ? <li>
+                    ? <li className={styles.navbarItem}>
                         <button disabled>Выход</button>
                     </li>
-                    : <li><a>Войти</a></li>
+                    : <li className={styles.navbarItem}><a>Войти</a></li>
                 }
             </ul>
         </header>

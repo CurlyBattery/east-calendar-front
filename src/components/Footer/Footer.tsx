@@ -7,9 +7,9 @@ const Footer = () => {
                 <p>© 2025 East Calendar</p>
                 <div className={styles.right}>
                     <ul>
-                        <li>Authors</li>
+                        <li><a href="#">Authors</a></li>
                         <li><div className={styles.stick}></div></li>
-                        <li>Contact</li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                     <p>🇷🇺 Russia</p>
                 </div>

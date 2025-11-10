@@ -1,158 +1,337 @@
 .main {
     font-family: 'MyFont', sans-serif;
-    display: flex;
-    flex-direction: column;
-    background: black;
+    background: #37353E;
+    z-index: 1;
 }
 
 .hero {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12em 0;
-
-
+    min-height: calc(100vh - 90px - 50px);
     .left {
         width: 50%;
         display: flex;
-        align-items: center;
         justify-content: center;
-
-        img {
-            width: 300px;
-            transform: rotate(-15deg);
-        }
+        align-items: center;
     }
-
     .right {
         width: 50%;
-        margin: 0 2em;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
 
         .heroTextBlock {
-            background: #dbd7d2;
-            padding: 1em;
-            border-radius: 15px;
+            max-width: 70%;
+            text-align: center;
+            color: #969696;
+            font-size: 1.1em;
+            font-weight: lighter;
+            gap: 50px;
 
             .headerForHero {
-                font-size: 22px;
-                text-align: center;
+                font-size: 1.4em;
+                color: #D3DAD9;
+                margin-bottom: 25px;
+            }
+            a {
+                display: inline-block;
+                margin-top: 10px;
+                padding: .5em 1em;
+                border-radius: 15px;
+                background-color: #F8EDED;
+                border: 1px solid #F8EDED;
+                color: #969696;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            a:hover {
+                background: none;
+                color: #F8EDED;
             }
         }
     }
 }
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
 
+.hero:before {
+    content: "";
+    inset: 0;
+    background-image:
+            url("src/assets/images/cross.png"),
+            url("src/assets/images/cross.png"),
+            url("src/assets/images/cross.png"),
+            url("src/assets/images/wreath.png"),
+            url("src/assets/images/wreath.png"),
+            url("src/assets/images/wreath.png"),
+            url("src/assets/images/sheet.png"),
+            url("src/assets/images/sheet.png"),
+            url("src/assets/images/circle.png"),
+            url("src/assets/images/circle.png");
+    background-repeat: no-repeat;
+    background-position:
+            10% 20%,
+            40% 100%,
+            70% 30%,
+            90% 80%,
+            80% 60%,
+            30% 60%,
+            34% 20%,
+            10% 85%,
+            90% 10%,
+            65% 90%;
+    background-size:
+            40px,
+            50px,
+            60px,
+            70px,
+            80px,
+            35px,
+            100px,
+            65px,
+            110px,
+            65px;
+    pointer-events: none;
+    opacity: 0.1;
+    z-index: 0;
+    position: absolute;
+}
 
 .howItWork {
+    position: relative;
+    min-height: calc(100vh - 90px - 50px);
+    padding: 1em;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12em 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #D3DAD9;
+    gap: 3em;
+    z-index: 1;
 
-    .left {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            width: 300px;
-            transform: rotate(-15deg);
-        }
+    .headerForHowItWork {
+        font-size: 1.5em;
     }
-
-    .right {
-        width: 50%;
-        margin: 0 2em;
+    .blockCards {
         display: flex;
-        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
 
-        .heroTextBlock {
-            background: #dbd7d2;
-            padding: 1em;
-            border-radius: 15px;
+        .card {
+            position: relative;
+            border-radius: 25px;
+            background-color: rgba(113, 90, 90, .9);
+            padding: 5em;
+            transition: .5s ease;
+            max-width: 350px;
 
-            .headerForHero {
-                font-size: 22px;
-                text-align: center;
+            .title {
+                font-size: 1.2em;
+                z-index: 2;
             }
+            .description {
+                font-size: 1.1em;
+                color: #969696;
+                z-index: 2;
+                font-weight: 200;
+            }
+        }
+        .card:hover {
+            cursor: pointer;
+            background-color: rgba(113, 90, 90, 1);
+            border: none;
+            box-shadow: 0px 0px 13px 4px rgba(254, 254, 254, 0.2);
+        }
+        .cardCreate:before {
+            content: "";
+            inset: 0;
+            background-image:
+                    url("src/assets/images/wreath.png"),
+                    url("src/assets/images/wreath.png"),
+                    url("src/assets/images/wreath.png"),
+                    url("src/assets/images/wreath.png");
+            background-repeat: no-repeat;
+            background-position:
+                    10% 80%,
+                    40% 100%,
+                    70% 30%,
+                    30% 30%;
+            background-size:
+                    30px,
+                    25px,
+                    24px,
+                    34px;
+            pointer-events: none;
+            z-index: 0;
+            position: absolute;
+            opacity: 0.1;
+        }
+        .cardNotification:before {
+            content: "";
+            inset: 0;
+            background-image:
+                    url("src/assets/images/sheet.png"),
+                    url("src/assets/images/sheet.png");
+            background-repeat: no-repeat;
+            background-position:
+                    90% 80%,
+                    50% 30%;
+            background-size:
+                    50px,
+                    44px;
+            pointer-events: none;
+            z-index: 0;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .cardPlan:before {
+            content: "";
+            inset: 0;
+            background-image:
+                    url("src/assets/images/cross.png"),
+                    url("src/assets/images/cross.png"),
+                    url("src/assets/images/cross.png");
+            background-repeat: no-repeat;
+            background-position:
+                    10% 20%,
+                    40% 100%,
+                    70% 30%;
+            background-size:
+                    30px,
+                    35px,
+                    24px;
+            pointer-events: none;
+            z-index: 0;
+            position: absolute;
+            opacity: 0.1;
         }
     }
 }
 
-.forWhom {
+.howItWork:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("src/assets/images/homeSectionHowItWorks.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 120%;
+    z-index: 0;
+}
+
+.howItWork > * {
+    position: relative;
+    z-index: 1;
+}
+
+.prices {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12em 0;
+    min-height: calc(100vh - 90px - 50px);
+    background-color: black;
+    position: relative;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #D3DAD9;
+    padding: 2em;
 
-
-    .left {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            width: 300px;
-            transform: rotate(-15deg);
-        }
+    .headerForPrices {
+        font-size: 1.5em;
     }
 
-    .right {
-        width: 50%;
-        margin: 0 2em;
-        display: flex;
-        align-items: center;
+    .pricesTable {
+        display: table;
+        width: 60%;
+        max-width: 1200px;
+        max-height: 400px;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        border-radius: 15px;
+        font-size: 1.2em;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        transform: perspective(1500px) rotateY(15deg);
+        transition: transform 2s ease 0s;
+        cursor: pointer;
 
-        .heroTextBlock {
-            background: #dbd7d2;
-            padding: 1em;
-            border-radius: 15px;
-
-            .headerForHero {
-                font-size: 22px;
-                text-align: center;
-            }
+        .tableRow td, .tableHeader th {
+            padding: 1em 2em;
+            text-align: start;
+            border: none;
+            border-right: 1px solid rgba(211, 218, 217, 0.5);
         }
+
+        .redHeader {
+            background-color: rgba(221, 45, 74, 0.2);
+        }
+
+        .blueHeader {
+            background-color: rgba(102, 155, 188, 0.2);
+        }
+
+        .greenHeader {
+            background-color: rgba(51, 92, 103, 0.2);
+        }
+
+        .tableHeader {
+            height: 60px;
+            background: rgb(150, 150, 150);
+        }
+        .tableRow {
+            display: table-row;
+        }
+
     }
+    .pricesTable tr:last-child td {
+        border-bottom: none;
+    }
+    .pricesTable th:last-child,
+    .pricesTable td:last-child {
+        border-right: none;
+    }
+    .pricesTable:hover {
+        transform: perspective(3000px) rotateY(0deg);
+    }
+}
+
+.prices:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+            url("src/assets/images/teeth.png"),
+            url("src/assets/images/face.png");
+    background-repeat: no-repeat;
+    background-position:
+            90% 100%,
+            0 -20%;
+    opacity: 0.5;
+    z-index: 0;
+}
+.prices > * {
+    position: relative;
+    z-index: 1;
 }
 
 .functionality {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12em 0;
-
-
-    .left {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            width: 300px;
-            transform: rotate(-15deg);
-        }
-    }
-
-    .right {
-        width: 50%;
-        margin: 0 2em;
-        display: flex;
-        align-items: center;
-
-        .heroTextBlock {
-            background: #dbd7d2;
-            padding: 1em;
-            border-radius: 15px;
-
-            .headerForHero {
-                font-size: 22px;
-                text-align: center;
-            }
-        }
-    }
+    background-color: black;
+    min-height: calc(100vh - 90px - 50px);
+    position: relative;
+}
+.functionality:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+            url("src/assets/images/homeFunctionality.png");
+    background-repeat: no-repeat;
+    background-position:
+            0 100%;
+    z-index: 0;
+}
+.functionality > * {
+    position: relative;
+    z-index: 1;
 }
