@@ -92,7 +92,7 @@
             110px,
             65px;
     pointer-events: none;
-    opacity: 0.1;
+    opacity: 0.03;
     z-index: 0;
     position: absolute;
 }
@@ -319,6 +319,41 @@
     background-color: black;
     min-height: calc(100vh - 90px - 50px);
     position: relative;
+    color: #D3DAD9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    .headerForFunctionality {
+        font-size: 1.5em;
+        cursor: default;
+    }
+
+    .functionalityList {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    .left {
+        text-align: start;
+    }
+    .right {
+        text-align: end;
+    }
+    .functionalityItem {
+        padding: 1em;
+        transform: perspective(1500px) rotateX(-360deg);
+        transition: transform 1s ease 0s;
+        border-bottom: 1px solid #D3DAD9;
+    }
+    .functionalityItem:hover {
+        cursor: pointer;
+        transform: perspective(3000px) rotateX(0deg);
+    }
+
 }
 .functionality:before {
     content: "";

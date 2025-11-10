@@ -67,13 +67,14 @@ const HomePage = () => {
                 </table>
             </section>
             <section className={styles.functionality}>
-                <ul>
-                    <li>✅ Задачи с приоритетом</li>
-                    <li>🕒 Уведомления и напоминания</li>
-                    <li>🗂 Категории и метки</li>
-                    <li>🔗 Прикрепление файлов и ссылок</li>
-                    <li>🌈 Удобный интерфейс календаря</li>
-                    <li>🔐 Безопасное хранение данных</li>
+                <h4 className={styles.headerForFunctionality}>Функциональность</h4>
+                <ul className={styles.functionalityList}>
+                    <li className={`${styles.functionalityItem} ${styles.left}`}>✅ Задачи с приоритетом</li>
+                    <li className={`${styles.functionalityItem} ${styles.right}`}>🕒 Уведомления и напоминания</li>
+                    <li className={`${styles.functionalityItem} ${styles.left}`}>🗂 Категории и метки</li>
+                    <li className={`${styles.functionalityItem} ${styles.right}`}>🔗 Прикрепление файлов и ссылок</li>
+                    <li className={`${styles.functionalityItem} ${styles.left}`}>🌈 Удобный интерфейс календаря</li>
+                    <li className={`${styles.functionalityItem} ${styles.right}`}>🔐 Безопасное хранение данных</li>
                 </ul>
             </section>
         </div>
