@@ -103,7 +103,6 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: #D3DAD9;
     gap: 3em;
@@ -232,7 +231,6 @@
     position: relative;
     flex-direction: column;
     gap: 50px;
-    justify-content: center;
     align-items: center;
     color: #D3DAD9;
     padding: 2em;
