@@ -1,3 +1,10 @@
+import { GoTasklist } from "react-icons/go";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { BiCategory } from "react-icons/bi";
+import { FaFileAlt } from "react-icons/fa";
+import { MdCalendarMonth } from "react-icons/md";
+import { FaDatabase } from "react-icons/fa6";
+
 import styles from './HomePage.module.css';
 import homeSectionHero from '../../assets/images/homeSectionHero.png';
 
@@ -69,12 +76,42 @@ const HomePage = () => {
             <section className={styles.functionality}>
                 <h4 className={styles.headerForFunctionality}>Функциональность</h4>
                 <ul className={styles.functionalityList}>
-                    <li className={`${styles.functionalityItem} ${styles.left}`}>✅ Задачи с приоритетом</li>
-                    <li className={`${styles.functionalityItem} ${styles.right}`}>🕒 Уведомления и напоминания</li>
-                    <li className={`${styles.functionalityItem} ${styles.left}`}>🗂 Категории и метки</li>
-                    <li className={`${styles.functionalityItem} ${styles.right}`}>🔗 Прикрепление файлов и ссылок</li>
-                    <li className={`${styles.functionalityItem} ${styles.left}`}>🌈 Удобный интерфейс календаря</li>
-                    <li className={`${styles.functionalityItem} ${styles.right}`}>🔐 Безопасное хранение данных</li>
+                    <li className={`${styles.functionalityItem} ${styles.left}`}>
+                        <div className={styles.functionalityItemContent}>
+                            <p>Задачи с приоритетом</p>
+                            <GoTasklist />
+                        </div>
+                    </li>
+                    <li className={`${styles.functionalityItem} ${styles.right}`}>
+                        <div className={styles.functionalityItemContent}>
+                            <IoNotificationsOutline/>
+                            <p>Уведомления и напоминания</p>
+                        </div>
+                    </li>
+                    <li className={`${styles.functionalityItem} ${styles.left}`}>
+                        <div className={styles.functionalityItemContent}>
+                            <p>Категории и метки</p>
+                            <BiCategory />
+                        </div>
+                    </li>
+                    <li className={`${styles.functionalityItem} ${styles.right}`}>
+                        <div className={styles.functionalityItemContent}>
+                            <FaFileAlt />
+                            <p>Прикрепление файлов и ссылок</p>
+                        </div>
+                    </li>
+                    <li className={`${styles.functionalityItem} ${styles.left}`}>
+                        <div className={styles.functionalityItemContent}>
+                            <p>Удобный интерфейс календаря</p>
+                            <MdCalendarMonth />
+                        </div>
+                    </li>
+                    <li className={`${styles.functionalityItem} ${styles.right}`}>
+                        <div className={styles.functionalityItemContent}>
+                            <FaDatabase />
+                            <p>Безопасное хранение данных</p>
+                        </div>
+                    </li>
                 </ul>
             </section>
         </div>
