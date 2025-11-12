@@ -1,0 +1,60 @@
+.header {
+    background-color: #37353E;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    color: #D3DAD9;
+    font-family: 'MyFont', sans-serif;
+    padding: 0 10em;
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.3em;
+
+        img {
+            max-height: 90px;
+        }
+    }
+    .logoContainer:hover {
+        cursor: pointer;
+        color: rgba(211, 218, 217, 0.5);
+    }
+
+
+    .navbarList {
+        display: flex;
+        gap: 2em;
+
+        .navbarItem {
+            a {
+                span {
+                    color: #E9B63B;
+                }
+            }
+        }
+        .navbarItem a:hover, a span:hover {
+            cursor: pointer;
+            color: rgba(211, 218, 217, 0.5);
+        }
+        .navbarItem:last-child a {
+            padding: .2em .5em;
+            border-radius: 15px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbarItem:last-child a:hover {
+            background-color: #E9B63B;
+            color: #37353E;
+        }
+
+    }
+}
+
+a {
+    color: #D3DAD9;
+}

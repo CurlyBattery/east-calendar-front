@@ -1,16 +1,40 @@
 import './index.css';
-import Header from "./components/Header/Header.tsx";
-import AppRoutes from "./components/AppRoutes/AppRoutes.tsx";
-import Footer from "./components/Footer/Footer.tsx";
+import {Route, Routes} from "react-router-dom";
+import AppLayout from "./components/Layout/AppLayout.tsx";
+import HomePage from "./pages/HomePage/HomePage.tsx";
+import RegistrationPage from "./pages/RegistrationPage/RegistrationPage.tsx";
+import LandingLayout from "./components/Layout/LandingLayout.tsx";
+import UsersPage from "./pages/UsersPage.tsx";
+import UserItemPage from "./pages/UserItemPage.tsx";
 
 function App() {
-  return (
-      <>
-          <Header />
-          <AppRoutes />
-          <Footer />
-      </>
-  )
+  const isAuth = false;
+
+    return (
+        <Routes>
+            {!isAuth && (
+                    <Route element={<LandingLayout />}>
+                        <Route path='/' element={<HomePage />}/>
+                    </Route>
+                )
+            }
+          <Route element={<AppLayout isAuth={isAuth}/>}>
+            {isAuth
+                ? (
+                    <>
+                        <Route path='/users' element={<UsersPage />}/>
+                        <Route path='/users/:id' element={<UserItemPage />}/>
+                    </>
+                )
+                : (
+                    <>
+                        <Route path='/register' element={<RegistrationPage />}/>
+                    </>
+                )
+            }
+          </Route>
+        </Routes>
+    )
 }
 
 export default App
