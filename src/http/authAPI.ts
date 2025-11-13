@@ -10,20 +10,25 @@ export const registerUser = async (user: IUser) => {
 }
 
 export const loginUser = async (email: string, password: string) => {
-    const { data } = await $host.post('auth/login', {
-        email,
-        password
-    });
+    const { data } = await $host.post(
+        'auth/login',
+        {
+            email,
+            password
+        },
+        {withCredentials: true}
+    );
+    console.log(data)
     return data;
 }
 
 export const logoutUser = async () => {
-    const { data } = await $host.delete('auth/logout');
+    const { data } = await $host.post('auth/logout', {},{withCredentials: true});
     return data;
 }
 
 export const refreshTokens = async () => {
-    const { data } = await $host.get('auth/refresh');
+    const { data } = await $host.post('auth/refresh', {},{withCredentials: true});
     return data;
 }
 

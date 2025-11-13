@@ -1,3 +1,40 @@
 .header {
     height: var(--header-height);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: var(--third-color);
+    border-bottom: 1px solid var(--first-color);
+
+    .left {
+        display: flex;
+        gap: 20px;
+        .logoContainer {
+            display: flex;
+            align-items: center;
+            color: #D3DAD9;
+            img {
+                height: 60px;
+                width: 60px;
+            }
+        }
+        .headerList {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .headerItem {
+                a {
+                    color: var(--first-color);
+                }
+            }
+        }
+    }
+    .right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        color: var(--first-color);
+    }
+
 }

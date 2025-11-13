@@ -9,6 +9,9 @@
     --main-font-family: 'MyFont', sans-serif;
     --input-padding: 10px;
     --button-padding: 10px;
+    --first-color: rgb(211, 218, 217);
+    --second-color: #44444E;
+    --third-color: #37353E;
 }
 
 @font-face {
@@ -43,9 +46,9 @@ a {
     flex: 1;
     z-index: -999;
 }
-
 .main {
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
     flex: 1;
     z-index: -999;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+
 }

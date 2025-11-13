@@ -1,11 +1,25 @@
 import styles from './LoginPage.module.css';
 import logo from '../../assets/images/logo.png';
-import {useState} from "react";
-import {Link} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import {useActions} from "../../hooks/useActions.ts";
+import {useTypeSelector} from "../../hooks/useTypeSelector.ts";
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const {login} = useActions();
+    const navigate = useNavigate();
+    const { loading, isAuth, error } = useTypeSelector(state => state.auth);
+
+    const handleLogin = () => {
+        login(email, password);
+    };
+
+    useEffect(() => {
+        if(isAuth) navigate('/users');
+    }, [isAuth, navigate])
 
     return (
         <div className={styles.loginContainer}>
@@ -30,11 +44,14 @@ const LoginPage = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
+                    {error && <div className={styles.errorMessage}>{error}</div>}
+
                     <button
                         type='button'
                         className={styles.loginButton}
+                        onClick={handleLogin}
                     >
-                        Войти
+                        {loading ? 'Загрузка...' : 'Войти'}
                     </button>
                 </form>
                 <div className={styles.notHaveAccount}>

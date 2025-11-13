@@ -1,11 +1,12 @@
 import {type FC, useEffect} from "react";
-
-import {useTypeSelector} from "../hooks/useTypeSelector.ts";
-import {useActions} from "../hooks/useActions.ts";
-import List from "../components/List/List.tsx";
-import type {IUser} from "../types/user.ts";
-import UserItem from "../components/UserItem/UserItem.tsx";
 import {useNavigate} from "react-router-dom";
+
+import styles from './UsersPage.module.css';
+import {useTypeSelector} from "../../hooks/useTypeSelector.ts";
+import {useActions} from "../../hooks/useActions.ts";
+import List from "../../components/List/List.tsx";
+import type {IUser} from "../../types/user.ts";
+import UserItem from "../../components/UserItem/UserItem.tsx";
 
 const UsersPage: FC = () => {
     const { users, error, loading } = useTypeSelector(state => state.user);
@@ -29,7 +30,7 @@ const UsersPage: FC = () => {
     }
 
     return (
-        <div>
+        <div className={styles.usersContainer}>
             <List
                 items={users}
                 renderItem={(user: IUser) =>

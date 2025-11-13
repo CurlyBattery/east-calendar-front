@@ -1,9 +1,9 @@
 import {type FC, useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-import {getUser} from "../http/userAPI.ts";
 
-import type {IUser} from "../types/user.ts";
-import {useTypeSelector} from "../hooks/useTypeSelector.ts";
+import type {IUser} from "../../types/user.ts";
+import {useTypeSelector} from "../../hooks/useTypeSelector.ts";
+import {getUser} from "../../http/userAPI.ts";
 
 type UserItemPageProps = {
     id: string;

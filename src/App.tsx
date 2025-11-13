@@ -5,9 +5,9 @@ import AppLayout from "./components/Layout/AppLayout.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage.tsx";
 import LandingLayout from "./components/Layout/LandingLayout.tsx";
-import UsersPage from "./pages/UsersPage.tsx";
-import UserItemPage from "./pages/UserItemPage.tsx";
 import LoginPage from "./pages/LoginPage/LoginPage.tsx";
+import UsersPage from "./pages/UsersPage/UsersPage.tsx";
+import UserItemPage from "./pages/UsersItemPage/UserItemPage.tsx";
 
 function App() {
     return (
