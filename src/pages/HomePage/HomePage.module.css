@@ -1,6 +1,5 @@
 .main {
-    font-family: 'MyFont', sans-serif;
-    background-color: #37353E;
+    background-color: var(--third-color);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
     background-size: 200px 200px;
     z-index: 1;
@@ -8,7 +7,7 @@
 
 .hero {
     display: flex;
-    min-height: calc(100vh - 90px - 50px);
+    min-height: calc(100vh - var(--landing-header-height) - var(--landing-footer-height));
     .left {
         width: 50%;
         display: flex;
@@ -24,29 +23,29 @@
         .heroTextBlock {
             max-width: 70%;
             text-align: center;
-            color: #969696;
-            font-size: 1.1em;
+            color: var(--four-color);
+            font-size: var(--main-font-size);
             font-weight: lighter;
-            gap: 50px;
+            gap: 20px;
+            cursor: default;
 
             .headerForHero {
-                font-size: 1.4em;
-                color: #D3DAD9;
-                margin-bottom: 25px;
+                font-size: var(--big-font-size);
+                color: var(--first-color);
             }
             a {
                 display: inline-block;
                 margin-top: 10px;
-                padding: .5em 1em;
-                border-radius: 15px;
-                background-color: #F8EDED;
-                border: 1px solid #F8EDED;
+                padding: var(--button-padding);
+                border-radius: var(--main-border-radius);
+                background-color: var(--first-color);
+                border: 1px solid var(--first-color);
                 color: #969696;
                 transition: background-color 0.3s ease, color 0.3s ease;
             }
             a:hover {
                 background: none;
-                color: #F8EDED;
+                color: var(--first-color);
             }
         }
     }
@@ -101,23 +100,24 @@
 
 .howItWork {
     position: relative;
-    min-height: calc(100vh - 90px - 50px);
-    padding: 1em;
+    min-height: calc(100vh - var(--landing-header-height) - var(--landing-footer-height));
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #D3DAD9;
-    gap: 3em;
+    color: var(--first-color);
+    gap: 20px;
     z-index: 1;
 
     .headerForHowItWork {
-        font-size: 1.5em;
+        font-size: var(--big-font-size);
+        cursor: default;
     }
     .blockCards {
         display: flex;
         width: 100%;
         justify-content: space-around;
         flex-wrap: wrap;
+        gap: 20px;
 
         .card {
             position: relative;
@@ -127,14 +127,11 @@
             max-width: 350px;
             box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
             .title {
-                font-size: 1.2em;
-                z-index: 2;
+                font-size: var(--main-font-size);
             }
             .description {
-                font-size: 1.1em;
-                color: #969696;
-                z-index: 2;
-                font-weight: 200;
+                font-size: var(--min-font-size);
+                color: var(--four-color);
             }
         }
         .card:hover {
@@ -225,17 +222,18 @@
 
 .prices {
     display: flex;
-    min-height: calc(100vh - 90px - 50px);
+    min-height: calc(100vh - var(--landing-header-height) - var(--landing-footer-height));
     background-color: black;
     position: relative;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
-    color: #D3DAD9;
+    color: var(--first-color);
     padding: 2em;
 
     .headerForPrices {
-        font-size: 1.5em;
+        font-size: var(--big-font-size);
+        cursor: default;
     }
 
     .pricesTable {
@@ -246,8 +244,8 @@
         border-collapse: separate;
         border-spacing: 0;
         overflow: hidden;
-        border-radius: 15px;
-        font-size: 1.2em;
+        border-radius: var(--main-border-radius);
+        font-size: var(--main-font-size);
         box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         transform: perspective(1500px) rotateY(15deg);
         transition: transform 2s ease 0s;
@@ -260,7 +258,7 @@
 
         .redHeader {
             border: 4px solid rgba(221, 45, 74, 0.2);
-            border-top-left-radius: 15px;
+            border-top-left-radius: var(--main-border-radius);
         }
 
         .blueHeader {
@@ -268,7 +266,7 @@
         }
 
         .greenHeader {
-            border-top-right-radius: 15px;
+            border-top-right-radius: var(--main-border-radius);
             border: 4px solid rgba(51, 92, 103, 0.2);
         }
 
@@ -311,17 +309,17 @@
 }
 
 .functionality {
-    min-height: calc(100vh - 90px - 50px);
+    min-height: calc(100vh - var(--landing-header-height) - var(--landing-footer-height));
     position: relative;
-    color: #D3DAD9;
+    color: var(--first-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
 
     .headerForFunctionality {
-        font-size: 1.5em;
+        font-size: var(--main-font-size);
         cursor: default;
     }
 
@@ -345,6 +343,7 @@
         transition: transform 1s ease 0s;
         background: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
+        font-size: var(--main-font-size);
     }
     .functionalityItem:hover {
         cursor: pointer;

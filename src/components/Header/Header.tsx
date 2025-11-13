@@ -34,11 +34,11 @@ const Header = () => {
                         <div className={styles.profile}>
                             {currentUser?.email}
                         </div>
-                        <button type='button' onClick={handleLogout}>Выйти</button>
+                        <button className={styles.logout} type='button' onClick={handleLogout}>Выйти</button>
                     </>
 
                 )}
-                <a href="#">Premium</a>
+                <a href="#" className={styles.premium}>Premium</a>
             </div>
 
         </header>

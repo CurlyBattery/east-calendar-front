@@ -3,15 +3,17 @@
     --landing-footer-height: 50px;
     --header-height: 60px;
     --footer-height: 60px;
-    --main-font-size: 14px;
+    --main-font-size: 16px;
     --big-font-size: 20px;
-    --min-font-size: 10px;
+    --min-font-size: 14px;
     --main-font-family: 'MyFont', sans-serif;
     --input-padding: 10px;
     --button-padding: 10px;
     --first-color: rgb(211, 218, 217);
     --second-color: #44444E;
     --third-color: #37353E;
+    --four-color: #979797;
+    --main-border-radius: 10px;
 }
 
 @font-face {
