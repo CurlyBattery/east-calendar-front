@@ -1,17 +1,10 @@
-const Footer = ({isAuth}) => {
+import styles from './Footer.module.css';
+
+const Footer = () => {
     return (
-        <>
-            {isAuth ? (
-                <>
-                    <footer>
-                        Footer
-                    </footer>
-                </>
-            ) : (
-                <></>
-            )
-            }
-        </>
+        <footer className={styles.footer}>
+            Footer
+        </footer>
     );
 };
 

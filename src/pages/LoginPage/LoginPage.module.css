@@ -1,4 +1,4 @@
-.registerContainer {
+.loginContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,20 +22,16 @@
                 width: 70px;
             }
         }
-        .registerForm {
+        .loginForm {
             display: flex;
             flex-direction: column;
             gap: 20px;
             width: 100%;
-
-            .registerItem {
+            .loginItem {
                 padding: var(--input-padding);
                 min-width: 300px;
             }
-            .errorMessage {
-                color: red;
-            }
-            .registerButton {
+            .loginButton {
                 padding: var(--button-padding);
             }
         }

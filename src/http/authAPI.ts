@@ -2,7 +2,10 @@ import type {IUser} from "../types/user.ts";
 import {$host} from "./index.ts";
 
 export const registerUser = async (user: IUser) => {
-    const { data } = await $host.post('auth/register', user);
+    const { data } = await $host.post(
+        'auth/register',
+        user,
+        {withCredentials: true});
     return data;
 }
 
@@ -25,6 +28,11 @@ export const refreshTokens = async () => {
 }
 
 export const me = async () => {
-    const { data } = await $host.get('auth');
+    const { data } = await $host.get(
+        'auth',
+        {
+            withCredentials: true
+        }
+    );
     return data;
 }

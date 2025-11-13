@@ -1,8 +1,9 @@
 import {type FC, useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {getUser} from "../http/userAPI.ts";
 
 import type {IUser} from "../types/user.ts";
+import {useTypeSelector} from "../hooks/useTypeSelector.ts";
 
 type UserItemPageProps = {
     id: string;
@@ -11,10 +12,16 @@ type UserItemPageProps = {
 const UserItemPage: FC = () => {
     const [user, setUser] = useState<IUser>();
     const { id } = useParams<UserItemPageProps>();
+    const { isAuth } = useTypeSelector(state => state.auth);
+    const navigate = useNavigate();
 
     useEffect(() => {
         getUser(id!).then(data => setUser(data));
     })
+
+    useEffect(() => {
+        if(!isAuth) navigate('/');
+    }, [isAuth, navigate])
 
     return (
         <div key={user?.id}>

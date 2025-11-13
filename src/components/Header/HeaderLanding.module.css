@@ -5,9 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: var(--landing-header-height);
     color: #D3DAD9;
-    font-family: 'MyFont', sans-serif;
     padding: 0 10em;
 
     .logoContainer {

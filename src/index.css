@@ -1,3 +1,16 @@
+:root {
+    --landing-header-height: 90px;
+    --landing-footer-height: 50px;
+    --header-height: 60px;
+    --footer-height: 60px;
+    --main-font-size: 14px;
+    --big-font-size: 20px;
+    --min-font-size: 10px;
+    --main-font-family: 'MyFont', sans-serif;
+    --input-padding: 10px;
+    --button-padding: 10px;
+}
+
 @font-face {
     font-family: 'MyFont';
     src: url('/src/assets/fonts/MPLUSRounded1c-Medium.ttf') format('truetype');
@@ -13,6 +26,7 @@
 
 html, body, #root {
     height: 100%;
+    font-family: 'MyFont', sans-serif;
 }
 
 li {
@@ -25,7 +39,13 @@ a {
 }
 
 .container {
-    min-height: calc(100vh - 90px - 50px);
+    min-height: calc(100vh - var(--landing-header-height) - var(--landing-footer-height));
+    flex: 1;
+    z-index: -999;
+}
+
+.main {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
     flex: 1;
     z-index: -999;
 }

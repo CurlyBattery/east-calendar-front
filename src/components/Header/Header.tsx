@@ -1,19 +1,10 @@
-const Header = ({isAuth}) => {
+import styles from './Header.module.css';
+
+const Header = () => {
     return (
-        <>
-            {isAuth ? (
-                <>
-                    <header>
-                        AuthHeader
-                    </header>
-                </>
-            ) : (
-                <header>
-                    NotAuthHeader
-                </header>
-            )
-            }
-        </>
+        <header className={styles.header}>
+            AuthHeader
+        </header>
     );
 };
 

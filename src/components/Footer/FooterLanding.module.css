@@ -1,5 +1,5 @@
 .footer {
-    height: 50px;
+    height: var(--landing-footer-height);
     background: white;
     padding: 1em;
 }

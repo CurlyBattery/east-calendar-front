@@ -1,9 +1,9 @@
 export interface IUser {
     id?: string;
     name: string;
+    password?: string;
     email: string;
-    password: string;
-    avatarUrl: string;
+    avatarUrl?: string;
 }
 
 export interface UserState {

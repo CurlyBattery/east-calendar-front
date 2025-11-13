@@ -9,12 +9,17 @@ import {useNavigate} from "react-router-dom";
 
 const UsersPage: FC = () => {
     const { users, error, loading } = useTypeSelector(state => state.user);
+    const { isAuth } = useTypeSelector(state => state.auth);
     const { fetchUsers } = useActions();
     const navigate = useNavigate();
 
     useEffect(() => {
         fetchUsers();
     }, [])
+
+    useEffect(() => {
+        if(!isAuth) navigate('/');
+    }, [isAuth, navigate])
 
     if(loading) {
         return <h1>Идет загрузка</h1>
