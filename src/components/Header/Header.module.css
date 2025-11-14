@@ -15,6 +15,7 @@
             align-items: center;
             color: #D3DAD9;
             font-size: var(--big-font-size);
+            cursor: pointer;
             img {
                 height: 60px;
                 width: 60px;
@@ -51,6 +52,7 @@
             background: none;
             color: var(--first-color);
             border-radius: var(--main-border-radius);
+            transition: all 1s;
         }
         .logout:hover {
             cursor: pointer;
@@ -58,9 +60,14 @@
         }
         .premium {
             padding: var(--button-padding);
-            background: #E9B63B;
+            border: 1px solid #E9B63B;
+            background: rgba(233, 182, 59, 0.5);
             border-radius: var(--main-border-radius);
             font-size: var(--main-font-size);
+            transition: all 1s;
+        }
+        .premium:hover {
+            background: rgba(233, 182, 59, 0);
         }
 
     }

@@ -2,20 +2,26 @@ import styles from './Header.module.css';
 import {useTypeSelector} from "../../hooks/useTypeSelector.ts";
 import logo from '../../assets/images/logo.png';
 import {useActions} from "../../hooks/useActions.ts";
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
     const { isAuth } = useTypeSelector(state => state.auth);
     const { currentUser } = useTypeSelector(state => state.auth);
     const {logout} = useActions();
+    const navigate = useNavigate();
 
     const handleLogout = () => {
         logout();
     };
 
+    const handleNavigate = () => {
+        navigate('/users')
+    }
+
     return (
         <header className={styles.header}>
             <div className={styles.left}>
-                <div className={styles.logoContainer}>
+                <div className={styles.logoContainer} onClick={handleNavigate}>
                     <img src={logo} alt="Логотип компании"/>
                     <p>EastCalendar</p>
                 </div>
